@@ -1,0 +1,42 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 5%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+}
+
+.navbar .logo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.02);
+}
+
+.navbar .profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--border-dark);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  object-fit: cover;
+  transition: var(--transition-all);
+}
+
+.navbar .profile:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-color);
+  box-shadow: 0 4px 10px rgba(255, 79, 48, 0.25);
+}

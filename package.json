@@ -1,0 +1,24 @@
+{
+  "name": "mern-food-delivery-app-root",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend",
+    "admin"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "backend": "npm run server --workspace=backend",
+    "frontend": "npm run dev --workspace=frontend",
+    "admin": "npm run dev --workspace=admin",
+    "dev": "node node_modules/concurrently/dist/bin/concurrently.js \"npm run backend\" \"npm run frontend\" \"npm run admin\""
+  },
+  "overrides": {
+    "rollup": "npm:@rollup/wasm-node"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+
